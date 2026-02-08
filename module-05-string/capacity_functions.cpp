@@ -13,12 +13,19 @@ int main(){
 
 
     //str.empty() = true/false return
+    // string str;
+    // if(name.empty()){
+    //     cout<<"Empty";
+    // }else{
+    //     cout<<"Not empty";
+    // }
+
+
+    //resize() method
     string str;
-    if(name.empty()){
-        cout<<"Empty";
-    }else{
-        cout<<"Not empty";
-    }
+    cin>>str; //Hello_World
+    str.resize(5);//Hello
+    str.resize(8, 'X'); //HelloXXX
 
     return 0;
 }
