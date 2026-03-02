@@ -8,6 +8,18 @@ class Student {
         int marks;
 };
 
+//ascending
+bool cmp(Student a, Student b){
+    if(a.marks > b.marks) return true;
+    else return false;
+}
+
+//descending
+bool cmp(Student a, Student b){
+    if(a.marks < b.marks) return true;
+    else return false;
+}
+
 int main(){
     Student students[3];
 
@@ -17,25 +29,9 @@ int main(){
         cin.ignore();
     }
 
+   //descending sort
+   sort(students, students+1, cmp);
 
-    //ascending sort
-    for (int i=0; i<2; i++){
-        for(int j=i+1; j<3; j++){
-            if(students[i].marks > students[j].marks){
-                swap(students[i], students[j]);
-            }
-        }
-    }
-
-    //descending sort
-    for (int i=0; i<2; i++){
-        for(int j=i+1; j<3; j++){
-            if(students[i].marks < students[j].marks){
-                swap(students[i], students[j]);
-            }
-        }
-    }
-    
     for(int i=0; i < 3; i++){
         cout<<students[i].name<<" "<<students[i].roll<<" "<<students[i].marks<<endl;
     }
